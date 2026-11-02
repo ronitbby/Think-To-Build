@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" role="img" aria-label="Budget Studio bars filling toward their limits beside a 3D piggy vault collecting coins for savings goals">
+  <defs>
+    <radialGradient id="pig" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#E9FFBE"/><stop offset=".55" stop-color="#B9F36A"/><stop offset="1" stop-color="#4E6B24"/></radialGradient>
+    <radialGradient id="coin" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFE6CC"/><stop offset=".6" stop-color="#D9A46C"/><stop offset="1" stop-color="#7A5A36"/></radialGradient>
+  </defs>
+  <style>
+    .mono{font-family:'JetBrains Mono',SFMono-Regular,Consolas,Menlo,monospace}
+    .bar{animation:grow 5s cubic-bezier(.16,1,.3,1) infinite;transform-box:fill-box;transform-origin:left}
+    @keyframes grow{0%{transform:scaleX(0)}55%,100%{transform:scaleX(1)}}
+    .b2{animation-delay:.15s}.b3{animation-delay:.3s}.b4{animation-delay:.45s}
+    .drop{animation:drop 2s cubic-bezier(.5,0,1,1) infinite}
+    .d2{animation-delay:.7s}.d3{animation-delay:1.4s}
+    @keyframes drop{0%{transform:translateY(-70px);opacity:0}15%{opacity:1}80%{transform:translateY(0);opacity:1}100%{transform:translateY(8px);opacity:0}}
+    .pig{animation:bob 4s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(-4px)}50%{transform:translateY(4px)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect width="600" height="340" rx="22" fill="#090B10"/>
+  <text x="30" y="44" class="mono" font-size="11" letter-spacing="3" fill="#83B8FF">[ BUDGETS ]</text>
+  <text x="380" y="44" class="mono" font-size="11" letter-spacing="3" fill="#B9F36A">[ SAVINGS VAULTS ]</text>
+
+  <g class="mono" font-size="11">
+    <text x="30" y="84" fill="#F5F7F3">🛒 Groceries</text><text x="300" y="84" text-anchor="end" fill="#B9F36A">57%</text>
+    <rect x="30" y="92" width="270" height="8" rx="4" fill="#181E29"/><rect class="bar" x="30" y="92" width="154" height="8" rx="4" fill="#B9F36A"/>
+    <text x="30" y="134" fill="#F5F7F3">🚗 Transport</text><text x="300" y="134" text-anchor="end" fill="#83B8FF">60%</text>
+    <rect x="30" y="142" width="270" height="8" rx="4" fill="#181E29"/><rect class="bar b2" x="30" y="142" width="162" height="8" rx="4" fill="#83B8FF"/>
+    <text x="30" y="184" fill="#F5F7F3">🍽️ Dining</text><text x="300" y="184" text-anchor="end" fill="#D9A46C">⚠ 98%</text>
+    <rect x="30" y="192" width="270" height="8" rx="4" fill="#181E29"/><rect class="bar b3" x="30" y="192" width="265" height="8" rx="4" fill="#D9A46C"/>
+    <text x="30" y="234" fill="#F5F7F3">🎬 Entertainment</text><text x="300" y="234" text-anchor="end" fill="#FF5C5C">🚨 100%</text>
+    <rect x="30" y="242" width="270" height="8" rx="4" fill="#181E29"/><rect class="bar b4" x="30" y="242" width="270" height="8" rx="4" fill="#FF5C5C"/>
+    <text x="30" y="290" fill="#929BA8">monthly limits per category</text>
+  </g>
+
+  <g class="drop"><circle cx="450" cy="150" r="10" fill="url(#coin)"/></g>
+  <g class="drop d2"><circle cx="462" cy="150" r="8" fill="url(#coin)"/></g>
+  <g class="drop d3"><circle cx="440" cy="150" r="9" fill="url(#coin)"/></g>
+  <g class="pig">
+    <ellipse cx="455" cy="282" rx="70" ry="9" fill="#B9F36A" opacity=".12"/>
+    <ellipse cx="455" cy="212" rx="70" ry="52" fill="url(#pig)"/>
+    <circle cx="512" cy="204" r="16" fill="#9ED653"/><circle cx="508" cy="202" r="2.5" fill="#4E6B24"/><circle cx="517" cy="202" r="2.5" fill="#4E6B24"/>
+    <circle cx="488" cy="186" r="4" fill="#090B10"/>
+    <path d="M 420 168 l 8 -18 l 10 16" fill="#9ED653"/>
+    <rect x="438" y="160" width="34" height="6" rx="3" fill="#2F4214"/>
+    <rect x="410" y="252" width="14" height="22" rx="5" fill="#8FC24A"/><rect x="480" y="252" width="14" height="22" rx="5" fill="#8FC24A"/>
+  </g>
+  <text x="455" y="320" text-anchor="middle" class="mono" font-size="11" fill="#E2E5EA">Emergency Fund · 62%</text>
+</svg>

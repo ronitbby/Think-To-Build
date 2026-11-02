@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="MARGIN: a metallic 3D money core with orbiting rupee coins over a moving perspective grid">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0C1118"/><stop offset="1" stop-color="#090B10"/></linearGradient>
+    <radialGradient id="core" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".25" stop-color="#C9D0DA"/><stop offset=".6" stop-color="#4B5565"/><stop offset="1" stop-color="#101722"/></radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#83B8FF" stop-opacity=".55"/><stop offset="1" stop-color="#83B8FF" stop-opacity="0"/></radialGradient>
+    <linearGradient id="title" x1="0" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#E2E5EA"/><stop offset=".42" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#83B8FF"/><stop offset=".58" stop-color="#FFFFFF"/><stop offset="1" stop-color="#929BA8"/>
+      <animate attributeName="x1" values="-1;1" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+    <radialGradient id="coin" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#FFE6CC"/><stop offset=".6" stop-color="#D9A46C"/><stop offset="1" stop-color="#7A5A36"/></radialGradient>
+    <clipPath id="floor"><rect x="0" y="290" width="1200" height="130"/></clipPath>
+    <path id="orbitA" d="M 690 210 a 210 62 0 1 0 420 0 a 210 62 0 1 0 -420 0"/>
+    <path id="orbitB" d="M 740 210 a 160 46 0 1 1 320 0 a 160 46 0 1 1 -320 0"/>
+  </defs>
+  <style>
+    .mono{font-family:'JetBrains Mono',SFMono-Regular,Consolas,Menlo,monospace}
+    .sans{font-family:'Space Grotesk','Segoe UI',Inter,Helvetica,Arial,sans-serif}
+    .star{animation:tw 3s ease-in-out infinite}
+    @keyframes tw{0%,100%{opacity:.15}50%{opacity:.9}}
+    .grid{animation:run 1.6s linear infinite}
+    @keyframes run{from{transform:translateY(0)}to{transform:translateY(26px)}}
+    .float{animation:fl 6s ease-in-out infinite}
+    @keyframes fl{0%,100%{transform:translateY(-6px)}50%{transform:translateY(6px)}}
+    .spin{animation:sp 9s linear infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes sp{to{transform:rotate(360deg)}}
+    .pulse{animation:pu 2.4s ease-in-out infinite}
+    @keyframes pu{0%,100%{opacity:.45}50%{opacity:1}}
+    .rise{animation:ri 1s cubic-bezier(.16,1,.3,1) both}
+    .d2{animation-delay:.25s}.d3{animation-delay:.5s}
+    @keyframes ri{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect x=".5" y=".5" width="1199" height="419" rx="24" fill="none" stroke="#C9D0DA" stroke-opacity=".15"/>
+
+  <g fill="#E2E5EA">
+    <circle class="star" cx="80" cy="60" r="1.4"/><circle class="star" cx="260" cy="40" r="1" style="animation-delay:.7s"/>
+    <circle class="star" cx="430" cy="300" r="1.2" style="animation-delay:1.4s"/><circle class="star" cx="610" cy="30" r="1" style="animation-delay:.3s"/>
+    <circle class="star" cx="1120" cy="130" r="1.5" style="animation-delay:1s"/><circle class="star" cx="1050" cy="250" r="1" style="animation-delay:2s"/>
+    <circle class="star" cx="700" cy="140" r="1.1" style="animation-delay:1.7s"/><circle class="star" cx="1160" cy="240" r="1" style="animation-delay:.5s"/>
+    <circle class="star" cx="560" cy="180" r="1" style="animation-delay:2.4s"/><circle class="star" cx="350" cy="120" r="1" style="animation-delay:.9s"/>
+  </g>
+
+  <!-- perspective floor scrolling toward the viewer -->
+  <g clip-path="url(#floor)" stroke="#83B8FF" stroke-opacity=".22">
+    <g class="grid">
+      <line x1="0" y1="264" x2="1200" y2="264"/><line x1="0" y1="290" x2="1200" y2="290"/><line x1="0" y1="306" x2="1200" y2="306"/>
+      <line x1="0" y1="326" x2="1200" y2="326"/><line x1="0" y1="352" x2="1200" y2="352"/><line x1="0" y1="384" x2="1200" y2="384"/>
+      <line x1="0" y1="420" x2="1200" y2="420"/>
+    </g>
+    <line x1="600" y1="290" x2="-600" y2="420"/><line x1="600" y1="290" x2="-200" y2="420"/><line x1="600" y1="290" x2="200" y2="420"/>
+    <line x1="600" y1="290" x2="450" y2="420"/><line x1="600" y1="290" x2="600" y2="420"/><line x1="600" y1="290" x2="750" y2="420"/>
+    <line x1="600" y1="290" x2="1000" y2="420"/><line x1="600" y1="290" x2="1400" y2="420"/><line x1="600" y1="290" x2="1800" y2="420"/>
+  </g>
+  <rect x="0" y="286" width="1200" height="22" fill="#090B10" opacity=".8"/>
+
+  <g class="rise"><text x="70" y="96" class="mono" font-size="13" letter-spacing="4" fill="#83B8FF">[ PERSONAL FINANCE STUDIO // OS.4 ]</text></g>
+  <g class="rise d2"><text x="64" y="190" class="sans" font-size="104" font-weight="800" letter-spacing="-3" fill="url(#title)">MARGIN</text></g>
+  <g class="rise d3">
+    <text x="70" y="236" class="sans" font-size="24" fill="#E2E5EA">Make room for what matters.</text>
+    <text x="70" y="270" class="mono" font-size="13" fill="#929BA8">Ledger · Budgets · Forecast · Vaults · Decision Lens</text>
+  </g>
+
+  <!-- 3D money core -->
+  <g class="float">
+    <ellipse cx="900" cy="335" rx="150" ry="16" fill="#83B8FF" opacity=".12"/>
+    <circle cx="900" cy="210" r="150" fill="url(#glow)" class="pulse"/>
+    <path d="M 690 210 a 210 62 0 0 1 420 0" fill="none" stroke="#A78BFA" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M 740 210 a 160 46 0 0 1 320 0" fill="none" stroke="#83B8FF" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <circle cx="900" cy="210" r="78" fill="url(#core)"/>
+    <ellipse class="spin" cx="900" cy="210" rx="78" ry="22" fill="none" stroke="#FFFFFF" stroke-opacity=".3"/>
+    <text x="900" y="226" text-anchor="middle" class="sans" font-size="46" font-weight="800" fill="#090B10" opacity=".75">₹</text>
+    <path d="M 690 210 a 210 62 0 0 0 420 0" fill="none" stroke="#A78BFA" stroke-width="2.5"/>
+    <path d="M 740 210 a 160 46 0 0 0 320 0" fill="none" stroke="#83B8FF" stroke-width="2" stroke-dasharray="4 6"/>
+    <g>
+      <circle r="15" fill="url(#coin)" stroke="#FFE6CC" stroke-opacity=".6"/>
+      <text y="5" text-anchor="middle" class="sans" font-size="15" font-weight="800" fill="#4a3520">₹</text>
+      <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#orbitA"/></animateMotion>
+      <animate attributeName="opacity" values="1;1;.2;.2;1" keyTimes="0;.45;.55;.95;1" dur="7s" repeatCount="indefinite"/>
+    </g>
+    <g><circle r="9" fill="#B9F36A"/><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#orbitB"/></animateMotion></g>
+    <g><circle r="7" fill="#83B8FF"/><animateMotion dur="7s" begin="-3.5s" repeatCount="indefinite"><mpath href="#orbitA"/></animateMotion></g>
+  </g>
+
+  <g class="mono">
+    <g class="pulse"><rect x="1000" y="40" width="166" height="48" rx="12" fill="#101722" stroke="#B9F36A" stroke-opacity=".55"/>
+      <text x="1014" y="60" fill="#B9F36A" font-size="10" letter-spacing="1.5">AVAILABLE MARGIN</text>
+      <text x="1014" y="78" fill="#F5F7F3" font-size="13" font-weight="700">₹68,885</text></g>
+    <g class="pulse" style="animation-delay:1.2s"><rect x="640" y="40" width="156" height="48" rx="12" fill="#101722" stroke="#83B8FF" stroke-opacity=".55"/>
+      <text x="654" y="60" fill="#83B8FF" font-size="10" letter-spacing="1.5">RETENTION RATE</text>
+      <text x="654" y="78" fill="#F5F7F3" font-size="13" font-weight="700">59% kept</text></g>
+  </g>
+</svg>

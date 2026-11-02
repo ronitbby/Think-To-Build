@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24" aria-hidden="true">
+  <defs>
+    <linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#83B8FF" stop-opacity="0"/><stop offset=".5" stop-color="#83B8FF" stop-opacity=".55"/><stop offset="1" stop-color="#83B8FF" stop-opacity="0"/></linearGradient>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .glint{animation:m 3.5s cubic-bezier(.6,0,.4,1) infinite}
+    @keyframes m{from{transform:translateX(-200px)}to{transform:translateX(1200px)}}
+    .gem{animation:r 6s linear infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes r{to{transform:rotate(405deg)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <rect x="0" y="11" width="1200" height="2" fill="url(#l)"/>
+  <rect class="glint" x="0" y="10" width="200" height="4" rx="2" fill="url(#g)"/>
+  <rect class="gem" x="595" y="7" width="10" height="10" fill="none" stroke="#83B8FF" stroke-width="2" transform="rotate(45 600 12)"/>
+</svg>
